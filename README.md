@@ -3,6 +3,10 @@ Court Counter Sample App
 
 Keeps track of football scores for two teams. Used in the Udacity Android for Beginners course.
 
+Below is the look of the application on device.
+
+
+
 Pre-requisites
 --------------
 
