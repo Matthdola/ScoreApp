@@ -13,136 +13,185 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:visibility="gone">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_margin="30dp"
+            android:layout_margin="@dimen/margin_30"
             android:textStyle="bold"
-            android:textSize="20sp"
-            android:text="Welcome to our Score kepper App"/>
+            android:textSize="@dimen/welcome_text_size"
+            android:text="@string/welcome_to_our_score_kepper_app"/>
+
         <EditText
             android:id="@+id/team1_name_edit"
             android:layout_width="match_parent"
-            android:hint="Name of first team"
-            android:layout_margin="10dp"
+            android:hint="@string/name_of_first_team"
+            android:layout_margin="@dimen/margin_10"
             android:layout_height="wrap_content" />
+
         <EditText
             android:id="@+id/team2_name_edit"
             android:layout_width="match_parent"
-            android:hint="Name of second team "
-            android:layout_margin="10dp"
+            android:hint="@string/name_of_second_team"
+            android:layout_margin="@dimen/margin_10"
             android:layout_height="wrap_content" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Game"
-            android:textSize="22sp"
+            android:text="@string/start_game"
+            android:textSize="@dimen/text_size_22"
             android:onClick="startGame"
-            android:layout_margin="10dp"/>
+            android:textColor="#FFFFFF"
+            android:layout_margin="@dimen/margin_10"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:textColor="#FFFFFF"
             android:onClick="quitApp"
-            android:textSize="22sp"
+            android:textSize="@dimen/text_size_22"
             android:text="Quit"/>
+
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/score_kepper_screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:visibility="visible">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Score Kepper"
+            android:text="@string/score_kepper"
             android:gravity="center"
             android:layout_margin="20dp"
-            android:textSize="20sp"
+            android:textSize="@dimen/text_size_45"
             android:textStyle="bold|italic"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="20dp">
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="10dp"
                 android:orientation="vertical">
+
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/id_team1_name"
-                    android:text="Team 1"
-                    android:textSize="16sp"
-                    android:textStyle="italic"
-                    android:layout_marginBottom="5dp"/>
-                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_16"
+                    android:text="@string/team_a"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_22"
+                    android:textStyle="bold"/>
+
+                <TextView
                     android:id="@+id/id_team1_score"
-                    android:textSize="18sp"
-                    android:layout_marginBottom="10dp"
-                    android:text="0"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/padding_24"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/text_size_56"
+                    />
+
                 <Button
                     android:id="@+id/btn_increase_team1_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dim_8_dp"
+                    android:layout_marginStart="@dimen/padding_24"
+                    android:layout_marginEnd="@dimen/padding_24"
                     android:onClick="incrementTeam1Score"
-                    android:text="Increment score"
-                    android:layout_marginTop="5dp"
+                    android:text="@string/increment_score"
                     />
+
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray">
+
+            </LinearLayout>
+            <!--
+            <view
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray" />
+            -->
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
                 android:orientation="vertical">
+
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:id="@+id/id_team2_name"
-                    android:gravity="end"
-                    android:textSize="16sp"
-                    android:textStyle="italic"
-                    android:layout_marginBottom="5dp"
-                    android:text="Team 2"/>
-                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_16"
+                    android:text="@string/team_a"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_22"
+                    android:textStyle="bold"/>
+
+                <TextView
                     android:id="@+id/id_team2_score"
-                    android:gravity="end"
-                    android:textSize="18sp"
-                    android:layout_marginBottom="10dp"
-                    android:text="0"/>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/padding_24"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/text_size_56"
+                    />
+
                 <Button
                     android:id="@+id/btn_increase_team2_score"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dim_8_dp"
+                    android:layout_marginStart="@dimen/padding_24"
+                    android:layout_marginEnd="@dimen/padding_24"
                     android:onClick="incrementTeam2Score"
-                    android:layout_marginTop="5dp"
-                    android:text="Increment score"
+                    android:text="@string/increment_score"
                     />
+
             </LinearLayout>
+
         </LinearLayout>
         <Button
             android:id="@+id/btn_reset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="reinitializeGame"
-            android:text="Reset"
-            android:layout_margin="10dp"/>
+            android:text="@string/reset"
+            android:layout_marginBottom="@dimen/margin_30" />
         <Button
             android:id="@+id/btn_close"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startNewGame"
-            android:text="New Game"
-            android:layout_margin="10dp"/>
+            android:text="@string/new_game"
+            android:layout_marginBottom="@dimen/margin_30" />
     </LinearLayout>
 </LinearLayout>

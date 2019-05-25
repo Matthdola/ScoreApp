@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Score Kepper App</string>
+    <string name="welcome_to_our_score_kepper_app">Welcome to our Score kepper App</string>
+    <string name="name_of_first_team">Name of first team</string>
+    <string name="name_of_second_team">Name of second team</string>
+    <string name="start_game">Start Game</string>
+    <string name="team_a">Team A</string>
+    <string name="score_kepper">Score Kepper</string>
+    <string name="increment_score">+1 Points</string>
+    <string name="reset">Reset</string>
+    <string name="new_game">New Game</string>
 </resources>
