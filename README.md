@@ -5,7 +5,7 @@ Keeps track of football scores for two teams. Used in the Udacity Android for Be
 
 Below is the look of the application on device.
 
-<img src="appscreenshot/scoreappscreenshot.png" width="100" >
+<img src="appscreenshot/scoreappscreenshot.png" width="300" >
 
 
 Pre-requisites
